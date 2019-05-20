@@ -1,2 +1,4 @@
 # Visualizer
-ACPS 2019 - Fina; Project
+ACPS Spring,2019 - Final Project
+Sort Visualizer
+By Aryan Sharma and David Xiedeng
