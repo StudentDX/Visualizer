@@ -1,4 +1,4 @@
-class Sorts{
+class Sorts extends Visualizer{
   int index;
   
   //num2 will be the final location of the bar
@@ -7,6 +7,7 @@ class Sorts{
     int toSwap = data[num1];
     data[num1] = data[num2];
     data[num2] = toSwap;
-    draw(num2, 255,0,0);
+    display(num1, 255, 255, 255);
+    display(num2, 255 ,0,0);
   }
 }
