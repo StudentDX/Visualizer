@@ -9,6 +9,8 @@ void setup(){
     data[x] = (int)random(-250,250);
   }
   draw();
+  fill(255);
+  rect(500,250, 100, -10);
 }
 
 void draw(){
