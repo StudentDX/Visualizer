@@ -1,5 +1,6 @@
 int[]data;
 int examine, swap, tick;
+Sorts test;
 
 void setup(){
   size(100,500);
@@ -11,6 +12,7 @@ void setup(){
   tick = 0;
   swap = 0;
   examine = 0;
+  test = new Sorts();
   display();
 }
 
@@ -31,7 +33,7 @@ void display(int index, int red, int green, int blue){
   
 void draw(){
   if (tick > 50){
-    swap(3,2);
+    test.swap(3,2);
     tick = 0;
   }
   tick++;
