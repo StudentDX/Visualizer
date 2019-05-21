@@ -2,9 +2,9 @@ int[]data;
 int examine, swap, tick;
 
 void setup(){
-  size(1000,500);
+  size(1500,500);
   background(0);
-  data = new int[(int)random(1000)];
+  data = new int[750];
   for (int x = 0; x < data.length; x++) {
     data[x] = (int)random(-250,250);
   }
@@ -19,5 +19,5 @@ void draw(){
 
 void draw(int index, int red, int green, int blue){
   fill(red, green, blue);
-  rect(index * (1000/data.length), 200, 1000/data.length, -data[index]);
+  rect(index * (1500/data.length), 250, 1500/data.length, -data[index]);
 }
