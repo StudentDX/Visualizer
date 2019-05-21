@@ -8,3 +8,5 @@ Development Log:
 May 20
 
 David - wrote a visualizer and base draw functions
+
+Aryan - doing testing with bubble sort 
