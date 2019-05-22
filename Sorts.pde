@@ -1,5 +1,9 @@
-static class Sorts extends Visualizer{
+class Sorts extends Visual{
   int index;
+  
+  Sorts(int[] data){
+    super(data);
+  }
   
   //num2 will be the final location of the bar
   //use accordingly
@@ -7,7 +11,8 @@ static class Sorts extends Visualizer{
     int toSwap = data[num1];
     data[num1] = data[num2];
     data[num2] = toSwap;
-    select(num2, num1);
+    display(num2, 0, 255, 0);
+    display(num1, 255, 255, 255);
   }
   
   //num1 will be displayed as red
