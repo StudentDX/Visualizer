@@ -1,11 +1,9 @@
 class Visual {
   int[]data;
-  int examine, swap, tick;
+  int tick;
 
   public Visual(int[] dat) {
-    data = dat; 
-    examine = 0;
-    swap = 0;
+    data = dat;
     tick = 0;
   }
 
