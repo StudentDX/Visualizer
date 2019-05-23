@@ -11,6 +11,6 @@ David - wrote a visualizer and base draw functions
 
 Aryan - doing testing with bubble sort  
 
-May 21
+May 21/22
 
 Aryan - finished writing bubble sort, now visualizes, messed with frames and swapping bars to determine when to end swapping
