@@ -1,8 +1,11 @@
 class Sorts extends Visual {
   int index;
+  int prev;
 
   Sorts(int[] data) {
     super(data);
+    index = 0;
+    prev = 0;
   }
 
   //num2 will be the final location of the bar
