@@ -15,9 +15,9 @@ class Visual {
 
   void display(int index, int red, int green, int blue) {
     fill(0);
-    rect(index * (100/data.length), 0, 100/data.length, 500);
+    rect(index * (width/data.length), 0, width/data.length, 500);
     fill(red, green, blue);
-    rect(index * (100/data.length), 250, 100/data.length, -data[index]);
+    rect(index * (width/data.length), 250, width/data.length, -data[index]);
   }
 
   void tick() {
