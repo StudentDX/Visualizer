@@ -1,5 +1,6 @@
 class BubbleSort extends Sorts {
   int end;
+  boolean done = false;
 
   BubbleSort(int[] data) {
     super(data);
@@ -7,18 +8,23 @@ class BubbleSort extends Sorts {
   }
 
   void bubbleSort() {
-    if (tick > 9) {
+    if (tick > 2 && !done) {
       tick = 0;
-      if (end == -1) {//end case
-        return;
-      }
       if (index>=end) {
+        display(index, 0, 255, 0);
         index=0;
         end--;
       }
+      if (end == -1) {//end case
+        display(0, 0, 255, 0);
+        done = true;
+        return;
+      }
+      select(index, prev); //highlights red
       if (data[index]>data[index+1]) {// swap
         swap(index, index + 1);
-      } else select(index, index - 1); //highlights red
+      }
+      prev = index;
       index++;
     }
     tick();
