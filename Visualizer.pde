@@ -14,5 +14,5 @@ void setup() {
 }
 
 void draw(){
-  v.sort();
+  v.mySort();
 }

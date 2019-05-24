@@ -7,7 +7,7 @@ class BubbleSort extends Sorts {
     end = data.length - 1;
   }
 
-  void sort() {
+  void mySort() {
     if (!done) {
       tick = 0;
       if (index>=end) {
