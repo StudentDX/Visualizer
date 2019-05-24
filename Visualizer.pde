@@ -1,4 +1,4 @@
-BubbleSort v;
+Sorts v;
 int[] data;
 
 void setup() {
