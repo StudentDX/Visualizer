@@ -7,8 +7,8 @@ class BubbleSort extends Sorts {
     end = data.length - 1;
   }
 
-  void bubbleSort() {
-    if (tick > 2 && !done) {
+  void sort() {
+    if (!done) {
       tick = 0;
       if (index>=end) {
         display(index, 0, 255, 0);
@@ -27,6 +27,5 @@ class BubbleSort extends Sorts {
       prev = index;
       index++;
     }
-    tick();
   }
 }

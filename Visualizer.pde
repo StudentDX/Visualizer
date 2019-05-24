@@ -2,9 +2,10 @@ BubbleSort v;
 int[] data;
 
 void setup() {
-  size(500, 500);
+  size(1500, 500);
+  frameRate(5000);
   background(0);
-  data = new int[100];
+  data = new int[500];
   for (int x = 0; x < data.length; x++) {
     data[x] = (int)random(-250, 250);
   }
@@ -13,5 +14,5 @@ void setup() {
 }
 
 void draw(){
-  v.bubbleSort();
+  v.sort();
 }

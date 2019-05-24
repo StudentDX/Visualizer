@@ -25,4 +25,6 @@ class Sorts extends Visual {
     display(num1, 255, 0, 0);
     display(num2, 255, 255, 255);
   }
+  
+  void sort(){}
 }
