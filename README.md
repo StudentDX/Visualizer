@@ -1,16 +1,32 @@
 # Visualizer
 ACPS Spring,2019 - Final Project
 Sort Visualizer
+
 By Aryan Sharma and David Xiedeng
 
 Development Log:
 
 May 20
 
-David - wrote a visualizer and base draw functions
+David - wrote base of visualizer code and base draw functions
 
-Aryan - doing testing with bubble sort  
+Aryan - random bars being placed, decided to include negative values, under the x axis
 
-May 21/22
+May 21
 
-Aryan - finished writing bubble sort, now visualizes, messed with frames and swapping bars to determine when to end swapping
+David - created formal bubble sort class and renamed and worked on draw commands
+
+Aryan - finished writing bubble sort, viusalizes, messed with frames and swapping bars to determine when to end swapping
+
+May 22
+
+David - took code from working bubble sort and implemented it in the formal bubble sort class by adding swap method,
+        compartmentalized methods
+
+Aryan - worked on display methods to change color when reaches end, took most of period fixing an error in the display
+
+May 23
+
+Both - worked together to finalize class structure and how to implement each of the sorts with the visualizer, now have working bubble sort visualizer that uses visual class
+
+May 24
