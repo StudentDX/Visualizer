@@ -9,6 +9,7 @@ class Selection_Sort extends Sorts {
 
   void mySort() {
     if (!done) {
+      int keeper;
       tick = 0;
       if (index>=end) {
         display(index, 0, 255, 0);
@@ -20,9 +21,11 @@ class Selection_Sort extends Sorts {
         done = true;
         return;
       }
-      select(index, prev); //highlights red
+      display(index, 255,0,0);
+      keeper = index;
+      
       if (data[index]>data[index+1]) {// swap
-        swap(index, index + 1);
+        display(
       }
       prev = index;
       index++;
