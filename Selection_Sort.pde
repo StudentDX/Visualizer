@@ -1,4 +1,4 @@
-class Selection_Sort extends Sorts {
+class SelectionSort extends Sorts {
   int end;
   boolean done = false;
 
@@ -9,10 +9,11 @@ class Selection_Sort extends Sorts {
 
   void mySort() {
     if (!done) {
-      int keeper;
+      int keeper = 0;
       tick = 0;
       if (index>=end) {
-        display(index, 0, 255, 0);
+        swap(0, keeper);
+        display(keeper, 0, 255, 0);
         index=0;
         end--;
       }
@@ -21,13 +22,11 @@ class Selection_Sort extends Sorts {
         done = true;
         return;
       }
-      display(index, 255,0,0);
-      keeper = index;
-      
-      if (data[index]>data[index+1]) {// swap
-        display(
+      display(index, 255, 0, 0);
+      display(keeper, 255,0,0);
+      if (data[index]<data[keeper]) {
+        keeper = index;
       }
-      prev = index;
       index++;
     }
   }
