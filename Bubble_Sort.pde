@@ -9,7 +9,6 @@ class BubbleSort extends Sorts {
 
   void mySort() {
     if (!done) {
-      tick = 0;
       if (index>=end) {
         display(index, 0, 255, 0);
         index=0;
@@ -22,7 +21,7 @@ class BubbleSort extends Sorts {
       }
       select(index, prev); //highlights red
       if (data[index]>data[index+1]) {// swap
-        swap(index, index + 1);
+        swap(index + 1, index);
       }
       prev = index;
       index++;
