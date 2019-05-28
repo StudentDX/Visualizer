@@ -30,3 +30,7 @@ May 23
 Both - worked together to finalize class structure and how to implement each of the sorts with the visualizer, now have working bubble sort visualizer that uses visual class
 
 May 24
+
+David - Merged Bubble to Main; made mySort in Sorts; renamed bubbleSort() to overwrite mySort()
+
+Aryan - Started selection sort;
