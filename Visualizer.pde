@@ -9,7 +9,7 @@ void setup() {
   for (int x = 0; x < data.length; x++) {
     data[x] = (int)random(-250, 250);
   }
-  v = new BubbleSort(data);
+  v = new SelectionSort(data);
   v.display();
 }
 
