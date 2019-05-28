@@ -27,7 +27,7 @@ class InsertionSort extends Sorts{
       }
       //shifting 
       else{
-        if (left > 0 && data[index - 1] > checking) {
+        if (left > 0 && data[left - 1] > checking) {
           swap(left - 1, left);
           left--;
         }

@@ -9,7 +9,7 @@ class Sorts extends Visual {
   }
 
   //num1 will be the final location of the bar
-  // displayed as red
+  // displayed as green
   //use accordingly
   void swap(int num1, int num2) {
     int toSwap = data[num2];
