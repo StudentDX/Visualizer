@@ -34,3 +34,7 @@ May 24
 David - Merged Bubble to Main; made mySort in Sorts; renamed bubbleSort() to overwrite mySort()
 
 Aryan - Started selection sort;
+
+May 28
+
+David - Working on Insertion Sort
