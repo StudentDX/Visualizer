@@ -22,7 +22,7 @@ May 22
 
 David - took code from working bubble sort and implemented it in the formal bubble sort class by adding swap method,
         compartmentalized methods
-
+        
 Aryan - worked on display methods to change color when reaches end, took most of period fixing an error in the display
 
 May 23
@@ -38,3 +38,7 @@ Aryan - Started selection sort;
 May 28
 
 David - Working on Insertion Sort
+
+May 29
+
+David - finished Insertion sort; changed how bars are displayed at the end; started quicksort
