@@ -10,12 +10,11 @@ class BubbleSort extends Sorts {
   void mySort() {
     if (!done) {
       if (index>=end) {
-        display(index, 0, 255, 0);
+        display(index, 255, 255, 255);
         index=0;
         end--;
       }
       if (end == -1) {//end case
-        display(0, 0, 255, 0);
         done = true;
         return;
       }
