@@ -14,10 +14,11 @@ class InsertionSort extends Sorts {
     if (index < data.length) {
       // iterating
       if (!shifting) {
-        if (data[index] > data[index - 1]) {
+        if (data[index] >= data[index - 1]) {
           select(index, index - 1);
           index++;
-        } else { //not int order, shifting right
+        } 
+        else { //not int order, shifting right
           shifting = true;
           checking = data[index];
           left = index - 1;
@@ -29,7 +30,8 @@ class InsertionSort extends Sorts {
         if (left > 0 && data[left - 1] > checking) {
           swap(left - 1, left);
           left--;
-        } else {
+        } 
+        else {
           shifting = false;
           select(index, left);
         }
