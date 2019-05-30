@@ -36,7 +36,7 @@ class MyLinkedList{
   boolean add(int value, int index) {
     Node toAdd= new Node();
     if (index == size()) add(value);
-    else if(index == 0) { 
+    else if(index == 0) { // add to start
       toAdd.setNext(start);
       start.setPrev(toAdd);
       start = toAdd;
@@ -64,6 +64,19 @@ class MyLinkedList{
     else start = null;
     size--;
     return output.getData();
+  }
+  
+  public int remove(int index){
+    int output = 0;
+    if (index == 0){
+      output = removeFront();
+    }
+    else if (index == size() - 1) {
+      output = end.getData();
+      end = end.prev();
+      end.setNext(null);
+    }
+    return output;
   }
   
   private Node getStart(){
