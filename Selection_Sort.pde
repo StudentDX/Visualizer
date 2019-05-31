@@ -21,11 +21,11 @@ class SelectionSort extends Sorts {
         index++;
         lowest = index + 1;
         wherenow = index + 1;
-        if (index > end - 2) { 
+        if (index > end - 2) { //attempt at solving out of bounds situation, not working
           if (data[index] > data[index +1]){
             swap(index, index + 1);
           }
-        }
+        } //end of attempt to fix
       }
       if (data[wherenow] < data[lowest]) {
         select(index, lowest);
