@@ -11,27 +11,22 @@ class SelectionSort extends Sorts {
   }
 
   void mySort() {
-    if (index == end) {//end case
-        done = true;
-        return;
-      }
-    if (index < end) {
-      if (wherenow == end) {
-        swap(lowest, index);
-        index++;
-        lowest = index + 1;
-        wherenow = index + 1;
-        if (index > end - 2) { //attempt at solving out of bounds situation, not working
-          if (data[index] > data[index +1]){
-            swap(index, index + 1);
-          }
-        } //end of attempt to fix
-      }
+    if (index < end - 1) {
       if (data[wherenow] < data[lowest]) {
-        select(index, lowest);
+        display(index, 255,0,0);
+        select(wherenow, lowest);
         lowest = wherenow;
       }
+ 
       wherenow++;
+      if (wherenow >= end) {
+        swap(lowest, index);
+        display(index, 0,255,0);
+        index++;
+        lowest = index;
+        wherenow = index + 1;
+      }
     }
+    display(index, 0, 255, 0);
     }
   }
