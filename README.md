@@ -46,3 +46,9 @@ May 29
 David - finished Insertion sort; changed how bars are displayed at the end; started quicksort
 
 Aryan - was sick on this day
+
+May 30 
+
+David - continued working on quickSort; stuck on implementation
+
+Aryan - Working on selectionSort;
