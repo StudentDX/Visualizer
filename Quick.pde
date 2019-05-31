@@ -3,8 +3,8 @@ class QuickSort extends Sorts{
   
   QuickSort (int[] data) {
     super(data);
-    ends.add(0);
-    ends.add(data.length - 1);
+    ends.addStart(0);
+    ends.addEnd(data.length);
   }
   
 }
