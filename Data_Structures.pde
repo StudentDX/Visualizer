@@ -17,7 +17,7 @@ class MyLinkedList{
     current = null;
   }
   
-  public boolean add(int value) { //current default will be to add to end
+  public boolean addEnd(int value) { //current default will be to add to end
     Node toAdd = new Node();
     toAdd.setData(value);
     if (this.size() == 0) { // an empty list calls its only node start and end
@@ -33,9 +33,25 @@ class MyLinkedList{
     return true;
   }
   
+  boolean addStart(int value) {
+    Node toAdd = new Node();
+    toAdd.setData(value);
+    if (this.size() == 0) { // an empty list calls its only node start and end
+      end = toAdd;
+      start = toAdd;
+      current = start;
+    }
+    else {
+      toAdd.setNext(end);
+      start = toAdd;
+    }
+    size++;
+    return true;
+  }
+  
   boolean add(int value, int index) {
     Node toAdd= new Node();
-    if (index == size()) add(value);
+    if (index == size()) addStart(value);
     else if(index == 0) { // add to start
       toAdd.setNext(start);
       start.setPrev(toAdd);
