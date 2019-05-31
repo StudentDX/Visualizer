@@ -1,33 +1,35 @@
 class SelectionSort extends Sorts {
   int end;
   boolean done = false;
+  int keeper;
+  int wherenow = 1;
 
   SelectionSort(int[] data) {
     super(data);
+    int index = 0;
     end = data.length - 1;
   }
 
   void mySort() {
-    if (!done) {
-      int keeper = 0;
-      tick = 0;
-      if (index>=end) {
-        swap(0, keeper);
-        display(keeper, 0, 255, 0);
-        index=0;
-        end--;
+    if (index < end) {
+      if (wherenow <= end) {
+        swap(index, keeper);
+        index++;
+        keeper = index + 1;
+        wherenow = index + 1;
       }
-      if (end == -1) {//end case
+      select(wherenow, keeper);
+      if (data[wherenow]<data[keeper]) {
+        keeper = wherenow;
+        wherenow++;
+      }
+    }
+
+      if (index == end) {//end case
         display(0, 0, 255, 0);
         done = true;
         return;
       }
-      display(index, 255, 0, 0);
-      display(keeper, 255,0,0);
-      if (data[index]<data[keeper]) {
-        keeper = index;
-      }
-      index++;
     }
   }
 }
