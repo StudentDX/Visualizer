@@ -76,23 +76,25 @@ class MyLinkedList{
     if (size() > 1) {
       start = start.next();
       start.setPrev(null);
+      size--;  
     }
-    else start = null;
-    size--;
+    else {
+      clear(); 
+    }
     return output.getData();
   }
   
-  public int remove(int index){
-    int output = 0;
-    if (index == 0){
-      output = removeFront();
-    }
-    else if (index == size() - 1) {
-      output = end.getData();
+  public int removeEnd() {
+    Node output = end;
+    if (size() > 1) {
       end = end.prev();
       end.setNext(null);
+      size--;  
     }
-    return output;
+    else {
+      clear();  
+    }
+    return output.getData();
   }
   
   private Node getStart(){
