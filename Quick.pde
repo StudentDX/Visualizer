@@ -26,21 +26,19 @@ class QuickSort extends Sorts {
   }
 
   void stepDown() {
-    // reset pivot
-    select(fStart - 1, fStart); //removes the red
-    swap(fStart - 1, ends.readStart());
-    pivot = -1;
+    // reset pivot where index of pivot becomes fStart - 1
+    pivot = fStart - 1;
+    select(pivot, fStart); //removes the red
+    swap(pivot, ends.readStart());
+    display(pivot, 255, 255, 255);
     // change high and low
-    if (fStart - 2 - ends.readStart() > 1) {
-      ends.addEnd(fStart - 2); // moves high 1 left of pivot
-    }
-    else {
-      ends.addStart(ends.readEnd() + 2); // moves 1 right of pivot
-      ends.removeEnd();
+    if () {
+      
     }
     //reset fakes
     fStart = ends.readStart();
     fEnd = ends.readEnd();
+    pivot = -1;
   }
 
   // precondition: pivot = -1
@@ -62,9 +60,7 @@ class QuickSort extends Sorts {
   }
 
   void mySort() {
-    if (fStart >= fEnd && pivot != - 1) {
-      stepDown();
-    } 
-    else partition();
+    if (fEnd >= fStart) partition();
+    else stepDown();
   }
 }
