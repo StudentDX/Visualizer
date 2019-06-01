@@ -31,6 +31,16 @@ class QuickSort extends Sorts {
     swap(fStart - 1, ends.readStart());
     pivot = -1;
     // change high and low
+    if (fStart - 2 - ends.readStart() > 1) {
+      ends.addEnd(fStart - 2); // moves high 1 left of pivot
+    }
+    else {
+      ends.addStart(ends.readEnd() + 2); // moves 1 right of pivot
+      ends.removeEnd();
+    }
+    //reset fakes
+    fStart = ends.readStart();
+    fEnd = ends.readEnd();
   }
 
   // precondition: pivot = -1
@@ -52,9 +62,9 @@ class QuickSort extends Sorts {
   }
 
   void mySort() {
-    if (fStart <= fEnd) {
-      partition();
+    if (fStart >= fEnd && pivot != - 1) {
+      stepDown();
     } 
-    else if (pivot != - 1) stepDown();
+    else partition();
   }
 }
