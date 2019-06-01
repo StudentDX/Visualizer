@@ -9,7 +9,8 @@ void setup() {
   for (int x = 0; x < data.length; x++) {
     data[x] = (int)random(-250, 250);
   }
-  v = new SelectionSort(data);
+  v = new InsertionSort(data);
+
   v.display();
 }
 
