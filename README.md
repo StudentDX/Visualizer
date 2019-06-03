@@ -47,8 +47,16 @@ David - finished Insertion sort; changed how bars are displayed at the end; star
 
 Aryan - was sick on this day
 
-May 30 
+May 30
 
 David - continued working on quickSort; stuck on implementation
 
 Aryan - Working on selectionSort;
+
+May 31
+
+Aryan - finished selectionSort, fixed visualization of bubbleSort colors
+
+June 3
+
+Aryan - work on the user interface
