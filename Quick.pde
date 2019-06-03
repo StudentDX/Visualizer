@@ -1,66 +1,67 @@
 class QuickSort extends Sorts {
-  MyLinkedList ends = new MyLinkedList(); //stores high and low indices  
+  MyLinkedList lows = new MyLinkedList(); //stores low indices
+  MyLinkedList highs = new MyLinkedList();
   int fStart, fEnd, pivot;
 
   QuickSort (int[] data) {
     super(data);
-    ends.addStart(0);
-    ends.addEnd(data.length - 1);
+    lows.add(0);
+    highs.add(data.length - 1);
+    pivot = -1;
     fStart = 0;
-    fEnd = data.length - 1;
+    fEnd = highs.read();
   }
 
   void partition() {
-    if (pivot < 0) findPivot(); 
-    select(fStart, index); // removes green after swapping
-    if (data[fStart] > data[ends.readStart()]) { // swap to end
+    if (pivot == -1) findPivot(); 
+    select(fStart, index);
+    if (data[fStart] > data[lows.read()]) { // swap to end
       swap(fEnd, fStart);
       index = fEnd;
       fEnd--;
     } 
     else { // step up
-      select(fStart, fStart);
       index = fStart;
       fStart++;
     }
   }
 
   void stepDown() {
-    // reset pivot where index of pivot becomes fStart - 1
-    pivot = fStart - 1;
-    select(pivot, fStart); //removes the red
-    swap(pivot, ends.readStart());
-    display(pivot, 255, 255, 255);
-    // change high and low
-    if () {
+    // reset pivot
+      if (data[fStart] < data[lows.read()]) {
+        pivot = fStart;
+        swap(fStart, lows.read());
+        pivot = -1;
       
-    }
-    //reset fakes
-    fStart = ends.readStart();
-    fEnd = ends.readEnd();
-    pivot = -1;
+      // change high and low
+      //reset fakes
+      }
+      else {
+        fStart--; 
+      }
   }
 
   // precondition: pivot = -1
   // creates a pivot
   void findPivot() { 
     int[] fP = {fStart, fEnd}; // stores potential pivots' indices, fP = findingPivot
-    if (data[fP[0]] > data[fP[1]]) { // 
+    if (data[fP[0]] > data[fP[1]]) { // swap if left is smaller than right
       int toSwap = fP[0];
       fP[0] = fP[1];
       fP[1] = toSwap;
     }
-    if (data[(fStart + fEnd) / 2] > data[fP[0]] || data[(fStart + fEnd) / 2] < data[fP[1]]) {
-      fP[0] = (fStart + fEnd) / 2;
-    }
-    pivot = fP[0]; //sets pivot
+    //set pivot
+    if ((fStart + fEnd) / 2 < fP[0]) pivot = fP[0]; //value is to the left
+    else if ((fStart + fEnd) / 2 > fP[1]) pivot = fP[1]; //value is to the right 
+    else pivot = (fStart + fEnd) / 2; //if value is between the two, replace left with this
     //swap pivot with start
-    swap(fP[0], fStart);
+    swap(lows.read(), fP[0]);
+    display(lows.read(), 0, 0 ,255);
     fStart++;
   }
 
   void mySort() {
-    if (fEnd >= fStart) partition();
-    else stepDown();
+    if (highs.size() > 0 && fStart < fEnd) partition();
+    //else stepDown();
   }
 }
