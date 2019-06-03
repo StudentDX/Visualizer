@@ -28,11 +28,20 @@ void setup() {
 }
 
 void draw(){
-  if (mousePressed) setupSort();
+  if (mousePressed && mode == 0) resize();
+  else if( mode == 1) setupSort();
 }
 
 void setupSort() {
-  surface.setResizable(true);
-  surface.setSize(1500,575);
-  surface.setResizable(false);
+  //draws bottom bar
+  fill(170);
+  rect(0, 500, 1500, 100);
+  //draws pause/start button
+  fill(220, 0, 0);
+  ellipse(750, 550, 80,80);
+}
+
+void resize() {
+  surface.setSize(1500,600);
+  mode++;
 }
