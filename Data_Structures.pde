@@ -17,7 +17,7 @@ class MyLinkedList{
     current = null;
   }
   
-  public boolean addEnd(int value) { //current default will be to add to end
+  public boolean add(int value) { //current default will be to add to end
     Node toAdd = new Node();
     toAdd.setData(value);
     if (this.size() == 0) { // an empty list calls its only node start and end
@@ -42,21 +42,10 @@ class MyLinkedList{
       current = start;
     }
     else {
-      toAdd.setNext(end);
+      toAdd.setNext(start);
       start = toAdd;
     }
     size++;
-    return true;
-  }
-  
-  boolean add(int value, int index) {
-    Node toAdd= new Node();
-    if (index == size()) addStart(value);
-    else if(index == 0) { // add to start
-      toAdd.setNext(start);
-      start.setPrev(toAdd);
-      start = toAdd;
-    }
     return true;
   }
   
@@ -71,20 +60,7 @@ class MyLinkedList{
     return output.substring(0, output.length() - 2) + "]";
   }
   
-  public int removeFront() {
-    Node output = start;
-    if (size() > 1) {
-      start = start.next();
-      start.setPrev(null);
-      size--;  
-    }
-    else {
-      clear(); 
-    }
-    return output.getData();
-  }
-  
-  public int removeEnd() {
+  public int remove() {
     Node output = end;
     if (size() > 1) {
       end = end.prev();
@@ -95,6 +71,10 @@ class MyLinkedList{
       clear();  
     }
     return output.getData();
+  }
+  
+  int read(){
+    return end.getData();
   }
   
   private Node getStart(){
