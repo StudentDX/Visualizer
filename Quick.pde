@@ -29,7 +29,7 @@ class QuickSort extends Sorts {
   void stepDown() {
     if (fStart >= data.length || highs.size() < 1) return;
     // reset pivot
-    while (data[fStart] > data[lows.read()]) fStart--;
+    while (data[fStart] >= data[lows.read()] && fStart > lows.read()) fStart--;
     pivot = fStart;
     swap(pivot, lows.read());
     display(pivot, 255, 255, 255);
@@ -64,7 +64,10 @@ class QuickSort extends Sorts {
   }
 
   void mySort() {
-    if (fStart < fEnd) partition();
-    else stepDown();
+    try {
+      if (fStart < fEnd) partition();
+      else stepDown();
+    }
+    catch (NullPointerException e) {}
   }
 }
