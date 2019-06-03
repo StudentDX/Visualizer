@@ -27,18 +27,22 @@ class QuickSort extends Sorts {
   }
 
   void stepDown() {
+    if (fStart >= data.length || highs.size() < 1) return;
     // reset pivot
-      if (data[fStart] < data[lows.read()]) {
-        pivot = fStart;
-        swap(fStart, lows.read());
-        pivot = -1;
-      
-      // change high and low
-      //reset fakes
-      }
-      else {
-        fStart--; 
-      }
+    while (data[fStart] > data[lows.read()]) fStart--;
+    pivot = fStart;
+    swap(pivot, lows.read());
+    display(pivot, 255, 255, 255);
+    // change high and low
+    
+    if (highs.read() <= lows.read()) {
+      lows.add(highs.remove() + 2);
+    }
+    else highs.add(pivot - 1);
+    //reset fakes
+    fStart = lows.read();
+    fEnd = highs.read();
+    pivot = -1;
   }
 
   // precondition: pivot = -1
@@ -56,12 +60,11 @@ class QuickSort extends Sorts {
     else pivot = (fStart + fEnd) / 2; //if value is between the two, replace left with this
     //swap pivot with start
     swap(lows.read(), fP[0]);
-    display(lows.read(), 0, 0 ,255);
     fStart++;
   }
 
   void mySort() {
-    if (highs.size() > 0 && fStart < fEnd) partition();
-    //else stepDown();
+    if (fStart < fEnd) partition();
+    else stepDown();
   }
 }
