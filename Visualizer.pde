@@ -1,13 +1,15 @@
 Sorts v;
+int mode; //determine the GUI
 int[] data;
 String[][] names = {
 {"Bubble Sort", "Insertion Sort", "Selection Sort", "Quick Sort"},
 {"Merge Sort", "Heap Sort", "Radix Sort"}
 };
+
 void setup() {
   size(1050, 280);
+  mode = 0;
   background(0);
-  
   for (int y = 0; y < 2; y++) {
     for (int x = 0; x < 4; x++) {
       if (y < names.length && x < names[y].length) {
@@ -26,5 +28,11 @@ void setup() {
 }
 
 void draw(){
-  
+  if (mousePressed) setupSort();
+}
+
+void setupSort() {
+  surface.setResizable(true);
+  surface.setSize(1500,575);
+  surface.setResizable(false);
 }
