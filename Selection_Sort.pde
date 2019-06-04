@@ -5,7 +5,6 @@ class SelectionSort extends Sorts {
 
   SelectionSort(int[] data) {
     super(data); //make array
-    int index = 0; //index starting at 0
     end = data.length; //set end to the length of data
   }
 

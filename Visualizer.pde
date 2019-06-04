@@ -29,6 +29,7 @@ void setup() {
 }
 
 void draw() {
+  if (mode == -1) setup();
   if (mode == 1) mousePressed();
   if (mode == 3) v.mySort();
 }
@@ -79,12 +80,20 @@ void mousePressed() {
     else if (mouseX > 200 && mouseX < 260 && mouseY > 515 && mouseY < 585) {//restart
       v.scramble();
     }
+    else if (mouseX > 1240 && mouseX < 1300 && mouseY > 515 && mouseY < 585) {//restart go to menu
+      surface.setSize(1050, 280);
+      mode = -1;
+    }
   } else { // sort unpaused
     if (mouseX > 720 && mouseX < 780 && mouseY > 520 && mouseY < 580) { // unpause button
       mode = 2;
     }
     else if (mouseX > 200 && mouseX < 260 && mouseY > 515 && mouseY < 585) {//restart
       v.scramble();
+    }
+    else if (mouseX > 1240 && mouseX < 1300 && mouseY > 515 && mouseY < 585) {//go to menu
+      surface.setSize(1050, 280);
+      mode = -1;
     }
   }
 }
