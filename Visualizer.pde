@@ -45,7 +45,7 @@ void clicked(){
         v = new BubbleSort(data);
       }
       if (mouseX > 270 && mouseX < 520) {//InsertionSort
-        data = new int[100];
+        data = new int[50];
         for (int x = 0; x < data.length; x++) {
           data[x] = (int)random(-250,250);
         }
