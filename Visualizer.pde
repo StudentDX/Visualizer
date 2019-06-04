@@ -37,21 +37,21 @@ void mousePressed() {
   if (mode == 0) {// start GUI
     if (mouseY > 10 && mouseY < 135) { 
       if (mouseX > 10 && mouseX < 260) {//BubbleSort
-        data = new int[50];
+        data = new int[75];
         for (int x = 0; x < data.length; x++) {
           data[x] = (int)random(-250, 250);
         }
         v = new BubbleSort(data);
       }
       if (mouseX > 270 && mouseX < 520) {//InsertionSort
-        data = new int[50];
+        data = new int[75];
         for (int x = 0; x < data.length; x++) {
           data[x] = (int)random(-250, 250);
         }
         v = new InsertionSort(data);
       }
       if (mouseX > 530 && mouseX < 780) {//SelectionSort
-        data = new int[50];
+        data = new int[75];
         for (int x = 0; x < data.length; x++) {
           data[x] = (int)random(-250, 250);
         }
@@ -90,6 +90,8 @@ void setupSort() {
   //draws pause/start button
   fill(220, 0, 0);
   ellipse(750, 550, 80, 80);
+  //draw restart/reset button
+  //draw
 }
 
 void resize() {

@@ -58,6 +58,7 @@ class QuickSort extends Sorts {
     else pivot = (fStart + fEnd) / 2; //if value is between the two, replace left with this
     //swap pivot with start
     swap(lows.read(), fP[0]);
+    display(lows.read(),255,255,255);
     fStart++;
   }
 
