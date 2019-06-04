@@ -28,8 +28,26 @@ void setup() {
 }
 
 void draw(){
-  if (mousePressed && mode == 0) resize();
-  else if( mode == 1) setupSort();
+  if (mousePressed) clicked();
+  if (mode == 3) v.mySort();
+}
+
+void clicked(){
+  if (mode == 0) resize();// start GUI
+  else if (mode == 1) {
+    setupSort();
+    if (mouseY > 10 && mouseY < 135) { 
+      if(mouseX > 10 && mouseX < 260) {//bubblesort
+        data = new int[100];
+        for (int x = 0; x < data.length; x++) {
+          data[x] = (int)random(-250,250);
+        }
+        v = new BubbleSort(data);
+      }
+    }
+    mode = 2;
+    v.display();
+  }
 }
 
 void setupSort() {
