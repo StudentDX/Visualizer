@@ -57,6 +57,12 @@ May 31
 
 Aryan - finished selectionSort, fixed visualization of bubbleSort colors
 
+Jun 2
+
+David - working on quickSort and partition;
+
 June 3
 
 Aryan - work on the user interface
+
+David - Finished quickSort; worked on user interface
