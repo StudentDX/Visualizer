@@ -50,6 +50,13 @@ void mousePressed() {
         }
         v = new InsertionSort(data);
       }
+      if (mouseX > 530 && mouseX < 780) {//SelectionSort
+        data = new int[50];
+        for (int x = 0; x < data.length; x++) {
+          data[x] = (int)random(-250, 250);
+        }
+        v = new SelectionSort(data);
+      }
     }
     if (v == null) return;
     resize();
