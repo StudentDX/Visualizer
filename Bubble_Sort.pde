@@ -15,6 +15,7 @@ class BubbleSort extends Sorts {
         end--;
       }
       if (end == -1) {//end case
+        display(index, 255, 255, 255);
         done = true;
         return;
       }
@@ -25,5 +26,11 @@ class BubbleSort extends Sorts {
       prev = index;
       index++;
     }
+  }
+
+  void scramble() {
+    super.scramble();
+    end = data.length - 1;
+    done = false;
   }
 }
