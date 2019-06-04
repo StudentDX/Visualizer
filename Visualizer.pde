@@ -37,16 +37,28 @@ void clicked(){
   else if (mode == 1) {
     setupSort();
     if (mouseY > 10 && mouseY < 135) { 
-      if(mouseX > 10 && mouseX < 260) {//bubblesort
-        data = new int[100];
+      if(mouseX > 10 && mouseX < 260) {//BubbleSort
+        data = new int[50];
         for (int x = 0; x < data.length; x++) {
           data[x] = (int)random(-250,250);
         }
         v = new BubbleSort(data);
       }
+      if (mouseX > 270 && mouseX < 520) {//InsertionSort
+        data = new int[100];
+        for (int x = 0; x < data.length; x++) {
+          data[x] = (int)random(-250,250);
+        }
+        v = new InsertionSort(data);
+      }
     }
     mode = 2;
     v.display();
+  }
+  else if (mode == 2){ //sort setup
+    if (mouseX > 720 && mouseX < 780 && mouseY > 520 && mouseY < 580) { // unpause button
+      mode = 3;
+    }
   }
 }
 
