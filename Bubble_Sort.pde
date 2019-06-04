@@ -15,6 +15,7 @@ class BubbleSort extends Sorts {
         end--;
       }
       if (end == -1) {//end case
+        display(index, 255, 255, 255);
         done = true;
         return;
       }

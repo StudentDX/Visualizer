@@ -19,8 +19,7 @@ class QuickSort extends Sorts {
       swap(fEnd, fStart);
       index = fEnd;
       fEnd--;
-    } 
-    else { // step up
+    } else { // step up
       index = fStart;
       fStart++;
     }
@@ -34,11 +33,10 @@ class QuickSort extends Sorts {
     swap(pivot, lows.read());
     display(pivot, 255, 255, 255);
     // change high and low
-    
+
     if (highs.read() <= lows.read()) {
       lows.add(highs.remove() + 2);
-    }
-    else highs.add(pivot - 1);
+    } else highs.add(pivot - 1);
     //reset fakes
     fStart = lows.read();
     fEnd = highs.read();
@@ -68,6 +66,7 @@ class QuickSort extends Sorts {
       if (fStart < fEnd) partition();
       else stepDown();
     }
-    catch (NullPointerException e) {}
+    catch (NullPointerException e) {
+    }
   }
 }
