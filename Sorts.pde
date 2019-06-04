@@ -7,7 +7,7 @@ class Sorts extends Visual {
     index = 0;
     prev = 0;
   }
-
+  
   // num1 will be the final location of the bar
   // displayed as green
   //use accordingly
@@ -27,5 +27,14 @@ class Sorts extends Visual {
   }
 
   void mySort() {
+  }
+  
+  void scramble() {
+    for (int x = 0; x < data.length; x++) {
+      data[x] = (int)random(-250,250);
+    }
+    display();
+    index = 0;
+    prev = 0;
   }
 }

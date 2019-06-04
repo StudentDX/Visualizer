@@ -70,4 +70,13 @@ class QuickSort extends Sorts {
     catch (NullPointerException e) {
     }
   }
+  
+  void scramble() {
+    super.scramble();
+    lows.add(0);
+    highs.add(data.length - 1);
+    pivot = -1;
+    fStart = 0;
+    fEnd = highs.read();
+  }
 }

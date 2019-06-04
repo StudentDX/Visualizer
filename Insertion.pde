@@ -36,4 +36,11 @@ class InsertionSort extends Sorts {
       }
     } else display(index - 1, 255, 255, 255);
   }
+  
+  void scramble() {
+    super.scramble();
+    left = 0;
+    index = 1;
+    shifting = false;
+  }
 }

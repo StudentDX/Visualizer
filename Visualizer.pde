@@ -76,9 +76,15 @@ void mousePressed() {
     if (mouseX > 720 && mouseX < 780 && mouseY > 520 && mouseY < 580) { // unpause button
       mode = 3;
     }
+    else if (mouseX > 200 && mouseX < 260 && mouseY > 515 && mouseY < 585) {//restart
+      v.scramble();
+    }
   } else { // sort unpaused
     if (mouseX > 720 && mouseX < 780 && mouseY > 520 && mouseY < 580) { // unpause button
       mode = 2;
+    }
+    else if (mouseX > 200 && mouseX < 260 && mouseY > 515 && mouseY < 585) {//restart
+      v.scramble();
     }
   }
 }
@@ -91,7 +97,12 @@ void setupSort() {
   fill(220, 0, 0);
   ellipse(750, 550, 80, 80);
   //draw restart/reset button
-  //draw
+  fill(220,0,0);
+  rect(200,515,60,70);
+  //draw menu button 
+  rect(1240,515,60,16);
+  rect(1240,542,60,16);
+  rect(1240,569,60,16);
 }
 
 void resize() {

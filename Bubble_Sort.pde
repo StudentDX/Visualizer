@@ -27,4 +27,10 @@ class BubbleSort extends Sorts {
       index++;
     }
   }
+
+  void scramble() {
+    super.scramble();
+    end = data.length - 1;
+    done = false;
+  }
 }
