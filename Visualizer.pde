@@ -57,6 +57,13 @@ void mousePressed() {
         }
         v = new SelectionSort(data);
       }
+      if (mouseX > 790 && mouseX < 1040) { // QuickSort
+        data = new int[250];
+        for (int x = 0; x < data.length; x++) {
+          data[x] = (int)random(-250, 250);
+        }
+        v = new QuickSort(data);
+      }
     }
     if (v == null) return;
     resize();
