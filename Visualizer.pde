@@ -33,8 +33,8 @@ void draw(){
 }
 
 void clicked(){
-  if (mode == 0) resize();// start GUI
-  else if (mode == 1) {
+  if (mode == 0) resize(); // start GUI
+  else if (mode == 1) { //sort setup
     setupSort();
     if (mouseY > 10 && mouseY < 135) { 
       if(mouseX > 10 && mouseX < 260) {//BubbleSort
@@ -55,9 +55,14 @@ void clicked(){
     mode = 2;
     v.display();
   }
-  else if (mode == 2){ //sort setup
+  else if (mode == 2){ //sort paused
     if (mouseX > 720 && mouseX < 780 && mouseY > 520 && mouseY < 580) { // unpause button
       mode = 3;
+    }
+  }
+  else { // sort unpaused
+    if (mouseX > 720 && mouseX < 780 && mouseY > 520 && mouseY < 580) { // unpause button
+      mode = 2;
     }
   }
 }
