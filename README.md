@@ -15,11 +15,11 @@ We have also implemented negative numbers which will extend under the horizontal
 
 Directions
 
-Run the program
+Run the program.
 The available sorts will be highlighted in green, select the one you would like to see visualized.
 Click the circle to start the visualization, the square to restart the visualization with a new set of random numbers and the three bars to go back to the main menu to select a different sort.
 
-
+Descriptions of currently available Sorts:
 
 
 Development Log:
