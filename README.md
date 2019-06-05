@@ -21,6 +21,14 @@ Click the circle to start the visualization, the square to restart the visualiza
 
 Descriptions of currently available Sorts:
 
+Bubble Sort: Bubble sort repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order.
+
+Insertion Sort: Our Insertion Sort creates a sorted array on the left side of the screen, taking the next value and sliding it down to the right place.
+
+Selection Sort: Selection Sort searches for the smallest value and swaps it with the current value. It repeats this for every single index.
+
+Quick Sort: Quick Sort utilizes a divide-and-conquer strategy to quickly sort data items by dividing a large array into two smaller arrays. It takes a pivot and reorders the values so that all the values greater than the pivot are on the right and all the values less than the pivot are on the left. It continues to do this with the two subarrays created and so on until the entire array is sorted.
+
 
 Development Log:
 
