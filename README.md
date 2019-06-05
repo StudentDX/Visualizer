@@ -7,7 +7,10 @@ By Aryan Sharma and David Xiedeng
 
 Hello! Welcome to our Sort Visualizer.
 
-A visualizer of the sorts we have done in class. Numbers in an array will be represented as white bars along the horizontal axis. The larger the number, the taller the bar. Currently selected values (bars) will be marked in red. Swaps will be marked with a green bar, though this may be in only some sorts. Every time there is a swap in the sort function, the corresponding bars will be swapped and this will continue until the sort is finished and the bars are arranged from shortest to tallest. We have also implemented negative numbers which will extend under the horizontal axis so the bars will be arranged from negative to positive.
+A visualizer of the sorts we have done in class.
+Numbers in an array will be represented as white bars along the horizontal axis. The larger the number, the taller the bar. Currently selected values (bars) will be marked in red. Swaps will be marked with a green bar, though this may be in only some sorts.
+Every time there is a swap in the sort function, the corresponding bars will be swapped and this will continue until the sort is finished and the bars are arranged from shortest to tallest.
+We have also implemented negative numbers which will extend under the horizontal axis so the bars will be arranged from negative to positive.
 
 
 
