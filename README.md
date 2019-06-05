@@ -1,8 +1,10 @@
 # Visualizer
-ACPS Spring,2019 - Final Project
+ACPS Spring, 2019 - Final Project
+
 Sort Visualizer
 
 By Aryan Sharma and David Xiedeng
+
 
 Development Log:
 
@@ -16,7 +18,7 @@ May 21
 
 David - created formal bubble sort class and renamed and worked on draw commands
 
-Aryan - finished writing bubble sort, viusalizes, messed with frames and swapping bars to determine when to end swapping
+Aryan - finished writing bubble sort, visualizes, messed with frames and swapping bars to determine when to end swapping
 
 May 22
 
