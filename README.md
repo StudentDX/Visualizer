@@ -12,13 +12,13 @@ Random numbers in an array will be represented as white bars along the horizonta
 Every time there is a swap in the sort function, the corresponding bars will be swapped and this will continue until the sort is finished and the bars are arranged from shortest to tallest.
 We have also implemented negative numbers which will extend under the horizontal axis so the bars will be arranged from negative to positive.
 
+
 Directions
 
 Run the program
-
 The available sorts will be highlighted in green, select the one you would like to see visualized.
-
 Click the circle to start the visualization, the square to restart the visualization with a new set of random numbers and the three bars to go back to the main menu to select a different sort.
+
 
 
 
