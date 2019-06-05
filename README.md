@@ -63,6 +63,14 @@ David - working on quickSort and partition;
 
 June 3
 
-Aryan - work on the user interface
+Aryan - worked on the user interface
 
 David - Finished quickSort; worked on user interface
+
+June 4
+
+Both - worked on user interface
+
+Aryan - fixed visualization error in bubblesort, added instructions and description
+
+David - added restart button
